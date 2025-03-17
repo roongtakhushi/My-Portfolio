@@ -1,0 +1,599 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 180px;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.sidebar h2 {
+    font-size: 18px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar nav ul li {
+    margin: 15px 0;
+}
+
+.sidebar nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    padding: 8px;
+    transition: 0.3s;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+.sidebar nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 200px;
+    padding: 20px;
+    max-width: 900px;
+}
+
+/* Center Everything */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* Centers everything horizontally */
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Container - Keeps the layout centered */
+.container {
+    width: 80%;  /* Adjusts width for better balance */
+    max-width: 900px;  /* Prevents excessive stretching */
+    text-align: center; /* Centers text inside sections */
+}
+
+/* Header - Centered */
+header {
+    width: 100%;
+    max-width: 900px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Sections - Properly Centered */
+.section {
+    width: 90%;
+    max-width: 800px;  /* Keeps sections uniform */
+    margin: 20px auto;  /* Centers sections properly */
+    text-align: center;  /* Aligns text in the middle */
+    padding: 30px;
+}
+
+
+/* Dark Mode */
+:root {
+    --bg-color: linear-gradient(135deg, #1e3c72, #2a5298);
+    --text-color: white;
+}
+
+body:has(#dark-toggle:checked) {
+    --bg-color: linear-gradient(135deg, #121212, #1e1e1e);
+    --text-color: #e0e0e0;
+}
+
+
+/* Dark Mode Toggle - Positioned in Upper Right Corner */
+.dark-mode-toggle {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    width: auto;  /* Adjust width to fit text */
+    height: 40px;
+    padding: 10px 15px;  /* More padding for better appearance */
+    font-size: 14px;
+    font-weight: bold;
+    background: rgba(255, 255, 255, 0.3);
+    color: white;
+    border-radius: 20px; /* Rounded for a button look */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+/* Hover Effect */
+.dark-mode-toggle:hover {
+    transform: scale(1.1);
+    background: rgba(255, 255, 255, 0.5);
+}
+
+/* Dark Mode Button Text */
+.dark-mode-toggle i {
+    font-size: 16px;
+    margin-right: 5px;  /* Space between icon and text */
+}
+
+.dark-mode-toggle span {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Hide the actual checkbox */
+#dark-toggle {
+    display: none;
+}
+
+
+
+/* Scroll to Top Button - Smaller & Cleaner */
+#scrollTop {
+    position: fixed;
+    bottom: 15px;  /* Slightly higher for better spacing */
+    right: 15px;   /* Keeps it aligned with dark mode button */
+    width: 60px;   /* Smaller size */
+    height: 40px;
+    font-size: 18px; /* Keeps the arrow visible */
+    background: rgba(255, 255, 255, 0.3);
+    color: white;
+    border: none;
+    border-radius: 50%; /* Circular button */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 1000; /* Keeps it above other elements */
+}
+
+/* Hover Effect */
+#scrollTop:hover {
+    transform: scale(1.1);
+    background: rgba(255, 255, 255, 0.5);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    .main-content {
+        margin-left: 0;
+        padding: 20px;
+    }
+}
+/* Glassmorphism Effect for Sections */
+.section {
+    background: rgba(255, 255, 255, 0.15); /* Transparent white */
+    border-radius: 15px;
+    padding: 30px;
+    margin: 20px auto;
+    text-align: left;
+    width: 80%;
+    max-width: 900px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px); /* Glass effect */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Light border */
+    transition: transform 0.3s, box-shadow 0.3s;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease-in-out forwards;
+}
+
+.section:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+/* Download Resume Button */
+.resume-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #ff7eb3, #ff758c);
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: background 0.3s, transform 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.resume-btn:hover {
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    transform: scale(1.05);
+}
+/* Gradient Hover Effect for Buttons */
+nav button, 
+#scrollTop, 
+.dark-mode-toggle, 
+.resume-btn {
+    background: linear-gradient(135deg, #ff7eb3, #ff758c);
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+nav button:hover, 
+#scrollTop:hover, 
+.dark-mode-toggle:hover, 
+.resume-btn:hover {
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    transform: scale(1.05);
+}
+
+/* Gradient Hover for Social Media Links */
+.contact-links a {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 10px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.contact-links a:hover {
+    background: linear-gradient(135deg, #ff7eb3, #ff758c);
+    transform: scale(1.1);
+}
+/* Responsive Design Tweaks */
+
+/* For Tablets (max-width: 1024px) */
+@media (max-width: 1024px) {
+    .container {
+        width: 90%;
+    }
+
+    .section {
+        width: 95%;
+    }
+
+    nav button {
+        width: 130px;
+        font-size: 14px;
+    }
+}
+
+/* For Mobile Devices (max-width: 768px) */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 10px;
+    }
+
+    header {
+        font-size: 18px;
+        padding: 15px;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    nav button {
+        width: 100px;
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .section {
+        width: 100%;
+        padding: 20px;
+    }
+
+    /* Adjust Sidebar for Mobile */
+    .sidebar {
+        width: 50px; /* Smaller sidebar */
+    }
+
+    .sidebar a {
+        font-size: 16px;
+        padding: 8px;
+    }
+
+    /* Resize Dark Mode Button */
+    .dark-mode-toggle {
+        top: 10px;
+        right: 10px;
+        width: 35px;
+        height: 35px;
+        font-size: 14px;
+        padding: 5px;
+    }
+
+    /* Resize Scroll to Top Button */
+    #scrollTop {
+        bottom: 10px;
+        right: 10px;
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+    }
+}
+
+/* For Extra Small Devices (max-width: 480px) */
+@media (max-width: 480px) {
+    header {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .section h2 {
+        font-size: 18px;
+    }
+
+    .section p {
+        font-size: 14px;
+    }
+
+    nav button {
+        width: 90px;
+        font-size: 10px;
+        padding: 6px;
+    }
+
+    .dark-mode-toggle {
+        width: 30px;
+        height: 30px;
+        font-size: 12px;
+    }
+
+    #scrollTop {
+        width: 30px;
+        height: 30px;
+        font-size: 14px;
+    }
+}
+
+/* FontAwesome Social Media Icons */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    background:#FAF3E0 ;
+    color: #A4C639;
+    font-size: 22px;
+    border-radius: 50%;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: scale(1.1);
+    background: rgba(255, 255, 255, 0.4);
+}
+
+/* WhatsApp & Instagram Colors */
+.social-icons a:nth-child(4) { /* WhatsApp */
+    color: #25D366;
+}
+
+.social-icons a:nth-child(5) { /* Instagram */
+    color: #E4405F;
+}
+.section {
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.section:hover {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3); /* Soft glow effect */
+}
+nav button {
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.3), rgba(0, 255, 255, 0.3));
+    transition: all 0.3s ease-in-out;
+}
+
+nav button:hover {
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.6), rgba(0, 255, 255, 0.6));
+    transform: scale(1.05);
+}
+
+/* Profile Picture Styling */
+.profile-pic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    width: 100%;
+}
+
+.profile-pic img {
+    width: 150px;  /* Slightly bigger for better visibility */
+    height: 150px;
+    border-radius: 50%;  /* Circular Shape */
+    border: 3px solid rgba(255, 255, 255, 0.3); /* Subtle border */
+    object-fit: cover;  /* Prevents distortion */
+    transition: transform 0.3s, box-shadow 0.3s;  /* Smooth transition */
+}
+
+/* Glow Effect on Hover */
+.profile-pic img:hover {
+    transform: scale(1.1);  /* Slight Zoom */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); /* Soft Glow */
+}
+/* 🌿 Soft & Minimalist Theme */
+
+/* Background & Text Colors */
+body {
+    background: #FAF3E0; /* Soft Cream */
+    color: #665D4D; /* Warm Beige */
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Sidebar – Subtle Look */
+.sidebar {
+    background: rgba(102, 93, 77, 0.9); /* Warm Beige with Transparency */
+    backdrop-filter: blur(10px); /* Soft Glass Effect */
+    border-right: 2px solid rgba(255, 255, 255, 0.2); /* Soft Border */
+}
+
+/* Section Styling – Softer Look */
+.section {
+    background: rgba(255, 255, 255, 0.7); /* Soft White */
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect for Sections */
+.section:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Buttons – Minimalist Look */
+button {
+    background: #A4C639; /* Fresh Olive Green */
+    color: #FAF3E0; /* Soft Cream */
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Button Hover Effect */
+button:hover {
+    background: #665D4D; /* Warm Beige */
+    color: #FAF3E0; /* Soft Cream */
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Dark Mode – Soft Muted Look */
+body:has(#dark-toggle:checked) {
+    background: #3E3E3E; /* Muted Dark Gray */
+    color: #FAF3E0; /* Light Cream */
+}
+
+/* Dark Mode Sidebar */
+body:has(#dark-toggle:checked) .sidebar {
+    background: rgba(62, 62, 62, 0.9); /* Muted Gray with Transparency */
+}
+
+/* Dark Mode Buttons */
+body:has(#dark-toggle:checked) button {
+    background: #FAF3E0; /* Light Cream */
+    color: #3E3E3E; /* Dark Text */
+}
+/* 🔘 Dark Mode Button – Aesthetic Touch */
+.dark-mode-toggle {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: #A4C639; /* Olive Green */
+    color: #FAF3E0; /* Soft Cream */
+    padding: 10px 18px;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.dark-mode-toggle:hover {
+    background: #665D4D; /* Warm Beige */
+    transform: scale(1.05);
+}
+
+/* 🆙 Scroll To Top Button – Matching Aesthetic */
+#scrollTop {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    background: #A4C639; /* Olive Green */
+    color: #FAF3E0; /* Soft Cream */
+    border: none;
+    padding: 10px 18px;
+    border-radius: 50px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+#scrollTop:hover {
+    background: #665D4D; /* Warm Beige */
+    transform: scale(1.05);
+}
+
+/* 📂 Resume Download Button – Minimalist Style */
+.resume-btn {
+    display: inline-block;
+    background: #A4C639; /* Olive Green */
+    color: #FAF3E0; /* Soft Cream */
+    padding: 10px 18px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.resume-btn:hover {
+    background: #665D4D; /* Warm Beige */
+    transform: scale(1.05);
+}
+
+
+
+
+

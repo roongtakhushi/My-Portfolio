@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="Welcomestyle.css">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="profile-pic">
+            <img src="photo.jpg" alt="Profile Picture">
+        </div>
+        
+        <h2>Menu ☰</h2>
+        <nav>
+            <ul>
+                <li><a href="#education">&#x2022 Education</a></li>
+                <li><a href="#projects">&#x2022 Projects</a></li>
+                <li><a href="#skills">&#x2022 Skills</a></li>
+                <li><a href="#about">&#x2022 About Me</a></li>
+                <li><a href="#contact">&#x2022 Contact</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Dark Mode Toggle -->
+    <input type="checkbox" id="dark-toggle">
+    <label for="dark-toggle" class="dark-mode-toggle">
+        <i class="fas fa-moon"></i> <span>Dark Mode</span>
+    </label>
+    
+    <!-- Scroll to Top Button -->
+    <button id="scrollTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">↑ Top</button>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <header>
+            <h1>I'm Khushi Roongta</h1>
+            <p>IT Student | Aspiring Developer | Studying in MITAOE</p>
+        <hr>
+        </header>
+
+        <main>
+            <section id="education" class="section">
+                <h2>Education &#127979</h2>
+                <p>Pursuing Bachelor's in IT Engineering - MIT Alandi </p>
+                <p>Relevant Courses: Data Structures, Web Development, AI Fundamentals</p>
+            </section>
+
+            <section id="projects" class="section">
+                <h2>Projects &#128203</h2>
+                <p>1. Developed an AI-based model to help small farmers predict crop yield and detect plant diseases.</p>
+                <p>2. Designed and developed a responsive portfolio website using HTML, CSS.</p>
+                <p>3. Built a working model demonstrating our AI driven solution on the following issue.</p>
+            </section>
+
+            <section id="skills" class="section">
+                <h2>Skills &#128187</h2>
+                <p>As an IT student, I have developed proficiency in a variety of programming languages and technologies. Here are some of my key skills:</p>
+                <p>Programming: Python, C, HTML, CSS</p>
+                <p>Web Development: Frontend Designing</p>
+                <p>Soft Skills: Problem-Solving, Teamwork</p>
+            </section>
+
+            <section id="about" class="section">
+                <h2>About Me &#x2022</h2>
+                <p>I am currently pursuing IT engineering at MITAOE. I have a keen interest in web 
+                    development, AI, and problem-solving. I love learning new technologies and working on projects.</p>
+                <!-- Download Resume Button -->
+                <a href="resume.pdf" download class="resume-btn">Download Resume</a>
+
+            </section>
+
+            <section id="contact" class="section">
+                <h2>Contact &#128222</h2>
+                <p>Email: khushiroongta0801@gmail.com</p>
+                <p>LinkedIn: linkedin.com/in/khushi</p>
+                <p>GitHub: github.com/example</p>
+                <div class="social-icons">
+                    <a href="https://linkedin.com/in/example" target="_blank" title="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/example" target="_blank" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:khushiroongta0801@gmail.com" title="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://wa.me/7620503376" target="_blank" title="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="https://instagram.com/roongta_khushi" target="_blank" title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+                
+                
+            </section>
+        </main>
+    </div>
+</body>
+</html>
