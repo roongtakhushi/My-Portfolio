@@ -611,6 +611,21 @@ body:has(#dark-toggle:checked) button {
     background: #665D4D; /* Warm Beige */
     transform: scale(1.05);
 }
+.Cisko-btn {
+    display: inline-block;
+    background: #A4C639; /* Olive Green */
+    color: #FAF3E0; /* Soft Cream */
+    padding: 10px 18px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
 
+.Cisko-btn:hover {
+    background: #665D4D; /* Warm Beige */
+    transform: scale(1.05);
+}
 
 
