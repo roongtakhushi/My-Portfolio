@@ -611,7 +611,7 @@ body:has(#dark-toggle:checked) button {
     background: #665D4D; /* Warm Beige */
     transform: scale(1.05);
 }
-.Cisko-btn {
+.Cisco-btn {
     display: inline-block;
     background: #A4C639; /* Olive Green */
     color: #FAF3E0; /* Soft Cream */
@@ -623,7 +623,7 @@ body:has(#dark-toggle:checked) button {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-.Cisko-btn:hover {
+.Cisco-btn:hover {
     background: #665D4D; /* Warm Beige */
     transform: scale(1.05);
 }
